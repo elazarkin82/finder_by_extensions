@@ -27,5 +27,5 @@ def find_files(root_dir: str, extension: List[str], filtered_dirs: List[str]):
 
 if __name__ == '__main__':
     t0 = time.time()
-    files = find_files('/home/elazarkin', ['.cpp'], ['.git'])
+    files = find_files('/home/', ['.cpp'], ['.git'])
     print("time: {:3.2f}".format(time.time() - t0))
