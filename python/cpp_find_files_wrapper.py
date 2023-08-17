@@ -17,7 +17,7 @@ def find_files(root_dir: str, extension: List[str], filtered_dirs: List[str]):
 
     cpp_callback = ctypes.CFUNCTYPE(None, ctypes.c_char_p)(py_callback)
     cpp_lib.find_files(
-        root_dir, 
+        root_dir.encode('utf-8'), 
         list2clist(filtered_dirs), len(filtered_dirs), 
         list2clist(extension), len(extension),
         cpp_callback
